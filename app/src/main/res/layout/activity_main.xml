@@ -13,10 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-    android:textStyle="italic"
         android:text=" BMI TEST "
         android:textColor="#0BCA0B"
-        android:textSize="50sp" />
+        android:textSize="50sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:id="@+id/Layout1"
@@ -66,11 +66,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:textColor="#000000"
                 android:text="HEIGHT : "
-                android:textSize="20sp" />
-
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/etHeight"
@@ -103,6 +102,7 @@
         android:layout_marginRight="20dp"
         android:gravity="end"
         android:text="@string/your_bmi"
+        android:textColor="@android:color/black"
         android:textSize="25sp" />
 
     <TextView
@@ -117,7 +117,7 @@
         android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/tvdescription"
+        android:id="@+id/tvDescription"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/tvdes"
