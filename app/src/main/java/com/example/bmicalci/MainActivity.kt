@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var desc: TextView
     private lateinit var btn: Button
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         height = findViewById(R.id.etHeight)
         btn = findViewById(R.id.btnCalculate)
         result = findViewById(R.id.tvResult)
-        desc = findViewById(R.id.tvdescription)
+        desc = findViewById(R.id.tvDescription)
 
 
         btn.setOnClickListener {
@@ -34,45 +33,42 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculateBMI() {
-        val strheight = height.text.toString()
-        val strweight = weight.text.toString()
-        val Height: Float
-        val Weight: Float
+        val strHeight = height.text.toString()
+        val strWeight = weight.text.toString()
+        val height: Float
+        val weight: Float
 
-        if (TextUtils.isEmpty(strheight)) {
-            height.error = "Cannot be Empty"
+        if (TextUtils.isEmpty(strHeight)) {
+            this.height.error = "Cannot be Empty"
             return
         } else {
-            Height = strheight.toFloat()
+            height = strHeight.toFloat()
         }
-        if (TextUtils.isEmpty(strweight)) {
-            weight.error = "Cannot be Empty"
+        if (TextUtils.isEmpty(strWeight)) {
+            this.weight.error = "Cannot be Empty"
             return
         } else {
-            Weight = strweight.toFloat()
+            weight = strWeight.toFloat()
         }
-        val bmi = Weight / (Height * Height)
-        displaybmi(bmi)
+        val bmi = weight / (height * height)
+        displayBmi(bmi)
     }
 
-    private fun displaybmi(bmi: Float) {
-        var strresult: String
+    private fun displayBmi(bmi: Float) {
         val des: String
 
-        var bmiLevel: String = when {
+        val bmiLevel: String = when {
             bmi < 16 -> "Severly UnderWeight"
             bmi < 18.25 -> "UnderWeight"
             bmi < 25 -> "Normal"
             bmi < 30 -> "OverWeight"
             else -> "Obese"
         }
-        strresult = "$bmi Kg/M2 "
-        result.text = strresult
+        val strResult: String = "$bmi Kg/M2 "
+        result.text = strResult
 
         des = "YOU are $bmiLevel"
         desc.text = des
 
     }
-
-
 }
