@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/background"
     tools:context=".MainActivity">
 
-    <TextView
+    <TextViewS
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -89,7 +88,7 @@
         android:layout_below="@+id/Layout1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:background="#839A51"
+        android:background="#E1EDC6"
         android:text="@string/calculate"
         android:textSize="30sp" />
 
@@ -121,7 +120,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/tvdes"
-        android:layout_margin="10dp"
         android:background="#FFA3A3"
         android:padding="10dp"
         android:text="BMI Description"
